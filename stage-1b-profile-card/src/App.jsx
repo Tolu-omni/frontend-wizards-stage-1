@@ -1,4 +1,4 @@
-import ProfileCard from './components/ProfileCard'
+import ProfileCard from './Components/ProfileCard,ProfileCard'
 import './App.css'
 
 function App() {
