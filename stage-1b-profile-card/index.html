@@ -1,13 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>stage-1b-profile-card</title>
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <main class="page">
+      <header class="page-header">
+        <h1 class="page-title">Profile Card</h1>
+        <p class="page-subtitle">
+          Accessible and responsive profile card for Stage 1B
+        </p>
+      </header>
+
+      <article
+        class="profile-card"
+        data-testid="test-profile-card"
+        aria-label="User profile card"
+      >
+        <figure class="profile-card__figure">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+            alt="Portrait of Tolu smiling"
+            class="profile-card__avatar"
+            data-testid="test-user-avatar"
+          />
+          <figcaption class="profile-card__caption">
+            Frontend Developer
+          </figcaption>
+        </figure>
+
+        <div class="profile-card__content">
+          <header class="profile-card__header">
+            <h2 class="profile-card__name" data-testid="test-user-name">
+              Tolu Omoniyi
+            </h2>
+
+            <p class="profile-card__bio" data-testid="test-user-bio">
+              Frontend-focused builder who enjoys creating accessible,
+              responsive, and polished user interfaces with clean structure and
+              thoughtful user experience.
+            </p>
+          </header>
+
+          <section class="profile-card__section" aria-label="Current time">
+            <span class="profile-card__label">Current time (milliseconds)</span>
+            <p
+              class="profile-card__time"
+              data-testid="test-user-time"
+              aria-live="polite"
+            >
+              0
+            </p>
+          </section>
+
+          <nav
+            class="profile-card__section"
+            aria-label="Social links"
+            data-testid="test-user-social-links"
+          >
+            <span class="profile-card__label">Social links</span>
+            <ul class="profile-card__social-list">
+              <li>
+                <a
+                  href="https://github.com/Tolu-omni"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-twitter"
+                >
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="profile-card__lists">
+            <section
+              class="profile-card__section"
+              aria-label="Hobbies"
+              data-testid="test-user-hobbies"
+            >
+              <span class="profile-card__label">Hobbies</span>
+              <ul class="profile-card__pill-list">
+                <li class="profile-card__pill">Design systems</li>
+                <li class="profile-card__pill">Reading</li>
+                <li class="profile-card__pill">Frontend experiments</li>
+              </ul>
+            </section>
+
+            <section
+              class="profile-card__section"
+              aria-label="Dislikes"
+              data-testid="test-user-dislikes"
+            >
+              <span class="profile-card__label">Dislikes</span>
+              <ul class="profile-card__pill-list">
+                <li class="profile-card__pill profile-card__pill--muted">
+                  Poor accessibility
+                </li>
+                <li class="profile-card__pill profile-card__pill--muted">
+                  Messy UI
+                </li>
+                <li class="profile-card__pill profile-card__pill--muted">
+                  Slow feedback loops
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
